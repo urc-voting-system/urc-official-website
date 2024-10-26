@@ -74,8 +74,32 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+
+  .btn-round {
+    @apply bg-primary text-white px-5 py-3 rounded-full flex items-center space-x-2 mt-5;
+  }
 }
 
 section {
   padding: 3rem 5%;
+}
+
+.hero_banner {
+  background: url("../asserts/images/tech6.webp");
+  background-position: end;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 5;
+}
+
+.hero_banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -5;
 }
